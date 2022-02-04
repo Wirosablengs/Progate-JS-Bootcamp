@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript DOM exercise</title>
+</head>
+<style>
+    h4 {
+        border-bottom: solid black;
+        max-width: 250px;
+    }
+</style>
+<body>
+    <h1>Horoscope Program</h1>
+    <button id= "myBtn">Click here!</button>
+    <h4>Are you lucky enough today?</h4>
+    <p id="Result"></p>
+<script>
+    const randNumber = document.getElementById("myBtn");
+    randNumber.addEventListener("click", displayResult);
+    function displayResult() {
+    const rank = Math.floor(Math.random() * 5 + 1); 
+    switch (rank) {
+    case 1:
+    document.getElementById("Result").innerHTML += "Perfecto!<br>"
+    break;
+    case 2:
+    document.getElementById("Result").innerHTML += "Almost there<br>"
+    break;
+    case 3:
+    document.getElementById("Result").innerHTML += "You are better than this!<br>"
+    break;
+    case 4:
+    document.getElementById("Result").innerHTML += "One step closer to your misfortune<br>"
+    break;
+    default:
+    document.getElementById("Result").innerHTML += "You are doomed<br>"
+    break;    
+  }
+  
+} 
+</script>
+</body>
+</html>
